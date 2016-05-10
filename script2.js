@@ -12,11 +12,11 @@ chrome.runtime.onMessage.addListener(
         $("#versions-textarea").val("EE 2.0 GA Milestone12");
             if(request.message.myurl.indexOf("pull") > -1) {
                     $("#labels-textarea").val("github PR");
-                    $("#description").val("Process pull request \n"+request.message.myurl);
+                    $("#description").val("Process pull request \n Possibly use https://github.corp.magento.com/hsharhan/public-pr-processor to process PR \n --- "+request.message.myurl);
                     $("#summary").val("[Github][PR] " + request.message.mytitle);
             } else {
                     $("#labels-textarea").val("github");
-                    $("#description").val(request.message.myurl + "\n " + "\n Possibly use https://github.corp.magento.com/hsharhan/public-pr-processor to process PR \n --- {quote}"+request.message.mydesc +"{quote}");
+                    $("#description").val(request.message.myurl + "\n --- "+request.message.mydesc +"{quote}");
                     $("#summary").val("[Github] "+request.message.mytitle);
             }
         var input = $("#labels-textarea").focus().blur();
