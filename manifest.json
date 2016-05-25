@@ -4,7 +4,7 @@
   "version": "0.1",
   "content_scripts": [
     {
-      "matches": ["https://github.com/*", "https://jira.corp.x.com/*", "https://github.corp.magento.com/*"],
+      "matches": ["https://github.com/*", "https://jira.corp.magento.com/*", "https://github.corp.magento.com/*"],
       "js": [ "jquery-2.2.1.min.js", "content.js", "script2.js", "config.js" ]
     }
   ],
@@ -15,6 +15,6 @@
     "default_icon": "magento_logo_icon.png"
   },
   "permissions": [
-    "tabs", "https://github.com/*", "https://jira.corp.x.com/*", "https://github.corp.magento.com/*"
+    "tabs", "https://github.com/*", "https://jira.corp.magento.com/*", "https://github.corp.magento.com/*"
   ]
 }

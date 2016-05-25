@@ -2,8 +2,8 @@
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
         if( request.message === "clicked_browser_action" ) {
-            var bugurl = "https://jira.corp.x.com/secure/CreateIssue.jspa?pid=11030&issuetype=1";
-            var taskurl = "https://jira.corp.x.com/secure/CreateIssue.jspa?pid=11030&issuetype=3";
+            var bugurl = "https://jira.corp.magento.com/secure/CreateIssue.jspa?pid=11030&issuetype=1";
+            var taskurl = "https://jira.corp.magento.com/secure/CreateIssue.jspa?pid=11030&issuetype=3";
 
             var githubTitle = $("span[class^='js-issue-title']").contents()[0];
             var issueId = $("span[class^='gh-header-number']").contents()[0];
@@ -36,7 +36,7 @@ if ((text.indexOf("MAGETWO") > -1) && (window.location.href.indexOf("github.com"
         var index = para[i].innerHTML.indexOf("MAGETWO-");
         if (index > -1) {
             var ticketNo = para[i].innerHTML.substring(index, index+13);
-            para[i].innerHTML = para[i].innerHTML.replace(ticketNo,"<a href='https://jira.corp.x.com/browse/"+ticketNo+"' target=_blank>"+ticketNo+"</a>");
+            para[i].innerHTML = para[i].innerHTML.replace(ticketNo,"<a href='https://jira.corp.magento.com/browse/"+ticketNo+"' target=_blank>"+ticketNo+"</a>");
         }
     }
 
